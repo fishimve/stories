@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225574218976",
+    "project_id": "world-stories-collection",
+    "storage_bucket": "world-stories-collection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225574218976:android:79d030d1140d20967bf485",
+        "android_client_info": {
+          "package_name": "com.fishimve.stories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225574218976-8j57q4fjif642cjpcaa6c21ab89jg6vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoK8u2r8t43ZdPSlFCJe0UL7Qcg0NrLEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225574218976-8j57q4fjif642cjpcaa6c21ab89jg6vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

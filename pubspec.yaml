@@ -1,0 +1,47 @@
+name: stories
+description: World Stories Collection
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  async: ^2.8.1
+  cached_network_image: ^3.1.0
+  cloud_firestore: ^2.5.3
+  connectivity: ^3.0.6
+  firebase_analytics: ^8.3.3
+  firebase_core: ^1.7.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  get_it: ^7.2.0
+  http: ^0.13.4
+  responsive_builder: ^0.4.1
+  stacked: ^2.2.7
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
+
+flutter_intl:
+  enable: true
