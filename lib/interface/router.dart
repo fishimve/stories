@@ -1,55 +1,43 @@
-// import 'package:flutter/material.dart';
-// import 'views/home_view/home_view.dart';
-// import 'views/ibisakuzo_view/ibisakuzo_view.dart';
-// import 'views/imigani_migufi_view/imigani_migufi_view.dart';
-// import 'views/incamarenga_view/incamarenga_view.dart';
-// import 'widgets/text_widget.dart';
-// import 'views/ikeshamvuga/ikeshamvuga_view.dart';
-// import '../shared/route_names.dart';
+import 'package:flutter/material.dart';
+import 'package:stories/interface/views/categories/categories_view.dart';
+import 'package:stories/models/story.dart';
+import 'package:stories/routes/route_names.dart';
 
-// PageRoute _pageRoute({required String routeName, required Widget view}) {
-//   return MaterialPageRoute(
-//     settings: RouteSettings(name: routeName),
-//     builder: (_) => view,
-//   );
-// }
+import 'views/story/story_view.dart';
 
-// Route<dynamic> generateRoute(RouteSettings settings) {
-//   switch (settings.name) {
-//     case homeViewRoute:
-//       return _pageRoute(
-//         routeName: settings.name!,
-//         view: const HomeView(),
-//       );
-//     case ibisakuzoViewRoute:
-//       var level = settings.arguments as int;
-//       return _pageRoute(
-//         routeName: settings.name!,
-//         view: IbisakuzoView(level: level),
-//       );
-//     case ikeshamvugoViewRoute:
-//       return _pageRoute(
-//         routeName: settings.name!,
-//         view: const IkeshamvugoView(),
-//       );
-//     case incamarengaViewRoute:
-//       return _pageRoute(
-//         routeName: settings.name!,
-//         view: const IncamarengaView(),
-//       );
-//     case imiganiMigufiViewRoute:
-//       return _pageRoute(
-//         routeName: settings.name!,
-//         view: const ImiganiMigufiView(),
-//       );
+PageRoute _pageRoute({required String routeName, required Widget view}) {
+  return MaterialPageRoute(
+    settings: RouteSettings(name: routeName),
+    builder: (_) => view,
+  );
+}
 
-//     default:
-//       return MaterialPageRoute(
-//         builder: (_) => const Scaffold(
-//           body: Center(
-//             child: TextWiget.headline3('Paje itazwi!'),
-//           ),
-//         ),
-//       );
-//   }
-// }
+Route<dynamic> generateRoute(RouteSettings settings) {
+  switch (settings.name) {
+    case storyViewRoute:
+      final story = settings.arguments as Story;
+      return _pageRoute(
+        routeName: settings.name!,
+        view: StoryView(story: story),
+      );
+    case categoryViewRoute:
+      final category = settings.arguments as Map<String, dynamic>;
+      return _pageRoute(
+        routeName: settings.name!,
+        view: CategoriessView(
+            category: category['category'], useAuthors: category['useAuthors']),
+      );
+
+    default:
+      return MaterialPageRoute(
+        builder: (_) => Scaffold(
+          body: Center(
+              child: Container(
+            height: 50,
+            width: 50,
+            color: Colors.red.shade300,
+          )),
+        ),
+      );
+  }
+}

@@ -1,3 +1,3 @@
-  void configureApp() {
-    // No-op.
-  }
+void configureRouteStyles() {
+  // No-op.
+}

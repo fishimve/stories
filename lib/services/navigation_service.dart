@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class NavigationService {
+import 'stoppable_service.dart';
+
+class NavigationService extends StoppableService {
   final _navigationKey = GlobalKey<NavigatorState>();
   GlobalKey<NavigatorState> get navigationKey => _navigationKey;
 

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 double get borderRadius => 15.0;
 
 const EdgeInsets basePadding = EdgeInsets.symmetric(
-  horizontal: 25.0,
-  vertical: 8.0,
+  horizontal: 30.0,
+  vertical: 10.0,
 );
 
 const EdgeInsets kcontentPadding =

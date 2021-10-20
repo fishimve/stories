@@ -1,0 +1,16 @@
+{
+  "@@locale": "en",
+  "authors": "Authors",
+  "dialogConfirmation": "Are you sure you want to remove this from your favourites?",
+  "dialogTitle": "Remove from Favourites",
+  "error": "Error!",
+  "favorites": "Favourites",
+  "internetIsLost": "Internet connection is not available",
+  "no": "No",
+  "notAvailable": "Stories are not available at the moment",
+  "ok": "Ok",
+  "search": "Search",
+  "stories": "Stories",
+  "title": "World Stories Collection",
+  "yes": "Yes"
+}

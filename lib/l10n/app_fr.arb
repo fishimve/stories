@@ -1,0 +1,16 @@
+{
+  "@@locale": "fr",
+  "authors": "Auteurs",
+  "dialogConfirmation": "Voulez-vous vraiment le supprimer de vos favoris ?",
+  "dialogTitle": "Supprimer des favoris",
+  "error": "Erreur!",
+  "favorites": "Favoris",
+  "internetIsLost": "La connexion Internet n'est pas disponible",
+  "no": "Non",
+  "notAvailable": "Les contes ne sont pas disponibles pour le moment",
+  "ok": "D'accord",
+  "search": "Rechercher",
+  "stories": "Contes",
+  "title": "Collection de Contes du Monde",
+  "yes": "Oui"
+}

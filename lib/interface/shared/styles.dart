@@ -8,24 +8,24 @@ const TextStyle headline1Style = TextStyle(
 
 const TextStyle headline2Style = TextStyle(
   fontFamily: 'OpenSans',
-  fontSize: 22,
+  fontSize: 20,
   fontWeight: FontWeight.w600,
 );
 
 const TextStyle headline3Style = TextStyle(
   fontFamily: 'OpenSans',
-  fontSize: 20,
-  fontWeight: FontWeight.w500,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
 );
 
 const TextStyle bodyStyle = TextStyle(
   fontFamily: 'OpenSans',
-  fontSize: 16,
+  fontSize: 14,
   fontWeight: FontWeight.w400,
 );
 
 const TextStyle captionStyle = TextStyle(
   fontFamily: 'OpenSans',
-  fontSize: 12,
+  fontSize: 10,
   fontWeight: FontWeight.w300,
 );
