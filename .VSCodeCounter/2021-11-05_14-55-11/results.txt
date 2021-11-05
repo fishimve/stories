@@ -1,0 +1,160 @@
+Date : 2021-11-05 14:55:11
+Directory : c:\Users\fabri\Documents\archive\stories
+Total : 86 files,  2776 codes, 356 comments, 470 blanks, all 3602 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         43 |      1,993 |         47 |        301 |      2,341 |
+| JSON       |          9 |        280 |          4 |          3 |        287 |
+| XML        |         12 |        136 |         51 |         14 |        201 |
+| Groovy     |          3 |        105 |          0 |         24 |        129 |
+| HTML       |          1 |         96 |         17 |          9 |        122 |
+| Python     |          9 |         95 |        213 |         98 |        406 |
+| YAML       |          3 |         46 |         23 |         13 |         82 |
+| Swift      |          1 |         12 |          0 |          2 |         14 |
+| Properties |          2 |          8 |          1 |          2 |         11 |
+| Markdown   |          2 |          4 |          0 |          3 |          7 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                     |         86 |      2,776 |        356 |        470 |      3,602 |
+| admin                                                                                                                                 |         10 |        107 |        213 |         99 |        419 |
+| admin\scripts                                                                                                                         |         10 |        107 |        213 |         99 |        419 |
+| admin\scripts\firebase                                                                                                                |         10 |        107 |        213 |         99 |        419 |
+| admin\scripts\firebase\keys                                                                                                           |          1 |         12 |          0 |          1 |         13 |
+| android                                                                                                                               |         16 |        227 |         50 |         38 |        315 |
+| android\app                                                                                                                           |         12 |        185 |         49 |         27 |        261 |
+| android\app\src                                                                                                                       |         10 |         75 |         49 |         12 |        136 |
+| android\app\src\debug                                                                                                                 |          1 |          4 |          3 |          1 |          8 |
+| android\app\src\main                                                                                                                  |          8 |         67 |         43 |         10 |        120 |
+| android\app\src\main\res                                                                                                              |          7 |         40 |         32 |          6 |         78 |
+| android\app\src\main\res\drawable                                                                                                     |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                                                                 |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\mipmap-anydpi-v26                                                                                            |          2 |         10 |          0 |          0 |         10 |
+| android\app\src\main\res\values                                                                                                       |          2 |         13 |          9 |          1 |         23 |
+| android\app\src\main\res\values-night                                                                                                 |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                                                               |          1 |          4 |          3 |          1 |          8 |
+| android\gradle                                                                                                                        |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                                                                |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                                                   |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner                                                                                                                            |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner\Assets.xcassets                                                                                                            |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                                         |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                                       |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                                                 |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                                                   |         45 |      2,041 |         23 |        294 |      2,358 |
+| lib\interface                                                                                                                         |         22 |      1,299 |         10 |        152 |      1,461 |
+| lib\interface\shared                                                                                                                  |          4 |        112 |          1 |         21 |        134 |
+| lib\interface\views                                                                                                                   |         11 |        726 |          4 |         77 |        807 |
+| lib\interface\views\categories                                                                                                        |          2 |        150 |          0 |         15 |        165 |
+| lib\interface\views\home                                                                                                              |          2 |        147 |          1 |         14 |        162 |
+| lib\interface\views\story                                                                                                             |          2 |        143 |          0 |         11 |        154 |
+| lib\interface\views\tags                                                                                                              |          5 |        286 |          3 |         37 |        326 |
+| lib\interface\widgets                                                                                                                 |          6 |        416 |          5 |         49 |        470 |
+| lib\l10n                                                                                                                              |          4 |         56 |          5 |          3 |         64 |
+| lib\models                                                                                                                            |          3 |         80 |          0 |          9 |         89 |
+| lib\routes                                                                                                                            |          1 |          3 |          0 |          1 |          4 |
+| lib\services                                                                                                                          |          9 |        361 |          2 |         94 |        457 |
+| lib\utilities                                                                                                                         |          4 |        136 |          2 |         17 |        155 |
+| test                                                                                                                                  |          1 |          0 |         24 |          7 |         31 |
+| web                                                                                                                                   |          2 |        125 |         17 |          9 |        151 |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                              | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\fabri\Documents\archive\stories\README.md                                                                                    | Markdown   |          1 |          0 |          1 |          2 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\delete_docs.py                                                        | Python     |          6 |         10 |          7 |         23 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\index_stories_for_search.py                                           | Python     |          0 |         37 |         12 |         49 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\keys\world-stories-collection-firebase-adminsdk-9f29p-dd45a7df50.json | JSON       |         12 |          0 |          1 |         13 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\modify_stories.py                                                     | Python     |          0 |         21 |          8 |         29 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\rate_stories.py                                                       | Python     |          0 |         29 |         10 |         39 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\remove_duplicated_stories.py                                          | Python     |         31 |          2 |         11 |         44 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\replace_story_tags.py                                                 | Python     |         19 |          7 |          8 |         34 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\reset_stories_authors_tags.py                                         | Python     |         39 |          5 |         14 |         58 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\story_img_assigner.py                                                 | Python     |          0 |         31 |         10 |         41 |
+| c:\Users\fabri\Documents\archive\stories\admin\scripts\firebase\story_upload.py                                                       | Python     |          0 |         71 |         18 |         89 |
+| c:\Users\fabri\Documents\archive\stories\analysis_options.yaml                                                                        | YAML       |          3 |         23 |          4 |         30 |
+| c:\Users\fabri\Documents\archive\stories\android\app\build.gradle                                                                     | Groovy     |         71 |          0 |         15 |         86 |
+| c:\Users\fabri\Documents\archive\stories\android\app\google-services.json                                                             | JSON       |         39 |          0 |          0 |         39 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\debug\AndroidManifest.xml                                                    | XML        |          4 |          3 |          1 |          8 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\AndroidManifest.xml                                                     | XML        |         27 |         11 |          4 |         42 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\drawable-v21\launch_background.xml                                  | XML        |          4 |          7 |          2 |         13 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\drawable\launch_background.xml                                      | XML        |          4 |          7 |          2 |         13 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml                                   | XML        |          5 |          0 |          0 |          5 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml                             | XML        |          5 |          0 |          0 |          5 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\values-night\styles.xml                                             | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\values\ic_launcher_background.xml                                   | XML        |          4 |          0 |          0 |          4 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\main\res\values\styles.xml                                                   | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\fabri\Documents\archive\stories\android\app\src\profile\AndroidManifest.xml                                                  | XML        |          4 |          3 |          1 |          8 |
+| c:\Users\fabri\Documents\archive\stories\android\build.gradle                                                                         | Groovy     |         26 |          0 |          5 |         31 |
+| c:\Users\fabri\Documents\archive\stories\android\gradle.properties                                                                    | Properties |          3 |          0 |          1 |          4 |
+| c:\Users\fabri\Documents\archive\stories\android\gradle\wrapper\gradle-wrapper.properties                                             | Properties |          5 |          1 |          1 |          7 |
+| c:\Users\fabri\Documents\archive\stories\android\settings.gradle                                                                      | Groovy     |          8 |          0 |          4 |         12 |
+| c:\Users\fabri\Documents\archive\stories\firebase.json                                                                                | JSON       |          7 |          4 |          0 |         11 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\AppDelegate.swift                                                                 | Swift      |         12 |          0 |          2 |         14 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json                                  | JSON       |        122 |          0 |          1 |        123 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json                                | JSON       |         23 |          0 |          1 |         24 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md                                    | Markdown   |          3 |          0 |          2 |          5 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Base.lproj\LaunchScreen.storyboard                                                | XML        |         36 |          1 |          1 |         38 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Base.lproj\Main.storyboard                                                        | XML        |         25 |          1 |          1 |         27 |
+| c:\Users\fabri\Documents\archive\stories\ios\Runner\Runner-Bridging-Header.h                                                          | C++        |          1 |          0 |          1 |          2 |
+| c:\Users\fabri\Documents\archive\stories\l10n.yaml                                                                                    | YAML       |          3 |          0 |          0 |          3 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\router.dart                                                                    | Dart       |         45 |          0 |          5 |         50 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\shared\colors.dart                                                             | Dart       |          9 |          0 |          3 |         12 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\shared\styles.dart                                                             | Dart       |         26 |          0 |          6 |         32 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\shared\themes.dart                                                             | Dart       |         53 |          0 |          3 |         56 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\shared\ui_helpers.dart                                                         | Dart       |         24 |          1 |          9 |         34 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\categories\categories_view.dart                                          | Dart       |        100 |          0 |          4 |        104 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\categories\categories_view_model.dart                                    | Dart       |         50 |          0 |         11 |         61 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\home\home_view.dart                                                      | Dart       |        108 |          0 |          6 |        114 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\home\home_view_model.dart                                                | Dart       |         39 |          1 |          8 |         48 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\story\story_view.dart                                                    | Dart       |         99 |          0 |          3 |        102 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\story\story_view_model.dart                                              | Dart       |         44 |          0 |          8 |         52 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\tags\authors_view.dart                                                   | Dart       |         35 |          1 |          6 |         42 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\tags\favorites_view.dart                                                 | Dart       |         32 |          1 |          6 |         39 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\tags\stories_view.dart                                                   | Dart       |         68 |          1 |          6 |         75 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\tags\tabs_view.dart                                                      | Dart       |         67 |          0 |          4 |         71 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\views\tags\tabs_view_model.dart                                                | Dart       |         84 |          0 |         15 |         99 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\creation_aware_list_item.dart                                          | Dart       |         25 |          0 |          5 |         30 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\stories_search_widget.dart                                             | Dart       |        122 |          0 |         12 |        134 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\story_widget.dart                                                      | Dart       |        105 |          4 |         15 |        124 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\tags_widget.dart                                                       | Dart       |         75 |          0 |          5 |         80 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\text_widget.dart                                                       | Dart       |         66 |          0 |          8 |         74 |
+| c:\Users\fabri\Documents\archive\stories\lib\interface\widgets\web_centered_widget.dart                                               | Dart       |         23 |          1 |          4 |         28 |
+| c:\Users\fabri\Documents\archive\stories\lib\l10n\app_en.arb                                                                          | JSON       |         16 |          0 |          0 |         16 |
+| c:\Users\fabri\Documents\archive\stories\lib\l10n\app_fr.arb                                                                          | JSON       |         16 |          0 |          0 |         16 |
+| c:\Users\fabri\Documents\archive\stories\lib\l10n\app_ru.arb                                                                          | JSON       |         16 |          0 |          0 |         16 |
+| c:\Users\fabri\Documents\archive\stories\lib\l10n\l10n.dart                                                                           | Dart       |          8 |          5 |          3 |         16 |
+| c:\Users\fabri\Documents\archive\stories\lib\locator.dart                                                                             | Dart       |         21 |          0 |          5 |         26 |
+| c:\Users\fabri\Documents\archive\stories\lib\main.dart                                                                                | Dart       |         85 |          4 |         13 |        102 |
+| c:\Users\fabri\Documents\archive\stories\lib\models\dialog.dart                                                                       | Dart       |         22 |          0 |          4 |         26 |
+| c:\Users\fabri\Documents\archive\stories\lib\models\language.dart                                                                     | Dart       |         19 |          0 |          2 |         21 |
+| c:\Users\fabri\Documents\archive\stories\lib\models\story.dart                                                                        | Dart       |         39 |          0 |          3 |         42 |
+| c:\Users\fabri\Documents\archive\stories\lib\routes\route_names.dart                                                                  | Dart       |          3 |          0 |          1 |          4 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\categories_service.dart                                                         | Dart       |         62 |          1 |         19 |         82 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\connectivity_service.dart                                                       | Dart       |         18 |          0 |          6 |         24 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\dialog_service.dart                                                             | Dart       |         42 |          0 |          9 |         51 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\favorites_service.dart                                                          | Dart       |         42 |          0 |         10 |         52 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\firestore_service.dart                                                          | Dart       |        110 |          1 |         25 |        136 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\languages_service.dart                                                          | Dart       |         32 |          0 |          8 |         40 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\localstorage_service.dart                                                       | Dart       |         25 |          0 |          7 |         32 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\navigation_service.dart                                                         | Dart       |         17 |          0 |          6 |         23 |
+| c:\Users\fabri\Documents\archive\stories\lib\services\stoppable_service.dart                                                          | Dart       |         13 |          0 |          4 |         17 |
+| c:\Users\fabri\Documents\archive\stories\lib\utilities\configure_nonweb.dart                                                          | Dart       |          2 |          1 |          1 |          4 |
+| c:\Users\fabri\Documents\archive\stories\lib\utilities\configure_web.dart                                                             | Dart       |          4 |          0 |          1 |          5 |
+| c:\Users\fabri\Documents\archive\stories\lib\utilities\dialog_manager.dart                                                            | Dart       |         76 |          0 |          7 |         83 |
+| c:\Users\fabri\Documents\archive\stories\lib\utilities\lifecycle_manager.dart                                                         | Dart       |         54 |          1 |          8 |         63 |
+| c:\Users\fabri\Documents\archive\stories\pubspec.yaml                                                                                 | YAML       |         40 |          0 |          9 |         49 |
+| c:\Users\fabri\Documents\archive\stories\test\widget_test.dart                                                                        | Dart       |          0 |         24 |          7 |         31 |
+| c:\Users\fabri\Documents\archive\stories\web\index.html                                                                               | HTML       |         96 |         17 |          9 |        122 |
+| c:\Users\fabri\Documents\archive\stories\web\manifest.json                                                                            | JSON       |         29 |          0 |          0 |         29 |
+| Total                                                                                                                                 |            |      2,776 |        356 |        470 |      3,602 |
++---------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

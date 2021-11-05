@@ -11,6 +11,11 @@ class NavigationService extends StoppableService {
         .pushNamed(routeName, arguments: arguments);
   }
 
+  Future<dynamic> navigateReplaceTo(String routeName, {dynamic arguments}) {
+    return _navigationKey.currentState!
+        .pushReplacementNamed(routeName, arguments: arguments);
+  }
+
   void pop() {
     return _navigationKey.currentState!.pop();
   }

@@ -21,15 +21,15 @@ class FirestoreService extends StoppableService {
   DocumentSnapshot? _lastDocument;
   bool _hasMorestories = true;
 
-  Stream listenToStoriesRealTime(List<String> languages) {
+  Stream listenToStoriesRealTime(Set<String> languages) {
     _requestStories(languages);
     return _storiesController.stream;
   }
 
-  Future<void> _requestStories(List<String> languages) async {
+  Future<void> _requestStories(Set<String> languages) async {
     var storiesQuery = _storiesRef
         .orderBy('rating', descending: true)
-        .where('language', whereIn: languages)
+        .where('language', whereIn: languages.toList())
         .limit(storiesLimit);
 
     if (_lastDocument != null) {
@@ -74,7 +74,7 @@ class FirestoreService extends StoppableService {
     );
   }
 
-  void requestMoreStories(List<String> languages) => _requestStories(languages);
+  void requestMoreStories(Set<String> languages) => _requestStories(languages);
 
   Future getAllLanguages() async {
     try {
@@ -110,7 +110,7 @@ class FirestoreService extends StoppableService {
     }
   }
 
-  Future getStoriesStartBy(List<String> languages, String startChar) async {
+  Future getStoriesStartBy(Set<String> languages, String startChar) async {
     try {
       var storiesDocsSnapshot = await _indexedRef
           .doc(startChar[0].toUpperCase())

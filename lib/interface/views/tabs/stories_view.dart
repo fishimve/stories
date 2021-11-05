@@ -4,10 +4,10 @@ import 'package:stories/interface/widgets/story_widget.dart';
 import 'package:stories/interface/widgets/tags_widget.dart';
 import 'package:stories/interface/widgets/web_centered_widget.dart';
 
-import 'home_view_model.dart';
+import 'tabs_view_model.dart';
 
 class StoriesView extends StatefulWidget {
-  final HomeViewModel viewModel;
+  final TabsViewModel viewModel;
   const StoriesView({Key? key, required this.viewModel}) : super(key: key);
 
   @override

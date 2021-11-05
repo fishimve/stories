@@ -14,11 +14,11 @@ final locator = GetIt.instance;
 Future<void> setupLocator() async {
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => DialogService());
-  locator.registerLazySingleton(() => FirestoreService());
   locator.registerLazySingleton(() => LanguagesService());
   locator.registerLazySingleton(() => FavoritesService());
   locator.registerLazySingleton(() => ConnectivityService());
   locator.registerFactory(() => CategoriesService());
+  locator.registerFactory(() => FirestoreService());
 
   var instance = await LocalStorageService.getServiceInstance();
   locator.registerSingleton<LocalStorageService>(instance!);

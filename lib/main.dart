@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -6,12 +7,10 @@ import 'package:stories/interface/shared/colors.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'interface/router.dart';
 import 'interface/shared/themes.dart';
 import 'interface/views/home/home_view.dart';
 import 'l10n/l10n.dart';
 import 'services/dialog_service.dart';
-import 'services/navigation_service.dart';
 import 'utilities/configure_nonweb.dart'
     if (dart.library.html) 'utilities/configure_web.dart';
 import 'locator.dart';
@@ -64,6 +63,7 @@ class WorldStories extends StatelessWidget {
   Widget build(BuildContext context) {
     return LifeCycleManager(
       child: MaterialApp(
+        scrollBehavior: CustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
         onGenerateTitle: (BuildContext context) =>
             AppLocalizations.of(context)!.title,
@@ -71,8 +71,6 @@ class WorldStories extends StatelessWidget {
         theme: ThemeConfig.lightTheme,
         darkTheme: ThemeConfig.darkTheme,
         themeMode: ThemeMode.system,
-        navigatorKey: locator<NavigationService>().navigationKey,
-        onGenerateRoute: generateRoute,
         builder: (context, child) => Navigator(
           key: locator<DialogService>().dialogNavigationKey,
           onGenerateRoute: (settings) => MaterialPageRoute(
@@ -91,4 +89,13 @@ class WorldStories extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }

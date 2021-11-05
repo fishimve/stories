@@ -15,7 +15,7 @@ class CategoriesViewModel extends BaseViewModel {
   final _categoriesService = locator<CategoriesService>();
   final _languagesService = locator<LanguagesService>();
 
-  List<String> get selectedLanguages => _languagesService.selectedLanguages;
+  Set<String> get selectedLanguages => _languagesService.selectedLanguages;
 
   final _categoryStories = <Story>[];
   List<Story> get categoryStories => _categoryStories;

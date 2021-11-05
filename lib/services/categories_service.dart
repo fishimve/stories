@@ -17,22 +17,22 @@ class CategoriesService extends StoppableService {
   bool _hasMoreStories = true;
 
   Stream listenToStoriesRealTime(
-      List<String> languages, String tag, bool useAuthors) {
+      Set<String> languages, String tag, bool useAuthors) {
     _requestStories(languages, tag, useAuthors);
     return _storiesController.stream;
   }
 
-  void _requestStories(List<String> languages, String tag, bool useAuthors) {
+  void _requestStories(Set<String> languages, String tag, bool useAuthors) {
     var pageStoriesQuery = useAuthors
         ? _storiesRef
             .orderBy('rating', descending: true)
             .where('author', isEqualTo: tag)
-            .where('language', whereIn: languages)
+            .where('language', whereIn: languages.toList())
             .limit(storiesLimit)
         : _storiesRef
             .orderBy('rating', descending: true)
             .where('tags', arrayContains: tag)
-            .where('language', whereIn: languages)
+            .where('language', whereIn: languages.toList())
             .limit(storiesLimit);
 
     if (_lastStoryDocument != null) {
@@ -76,7 +76,6 @@ class CategoriesService extends StoppableService {
     );
   }
 
-  void requestMoreStories(
-          List<String> languages, String tag, bool useAuthors) =>
+  void requestMoreStories(Set<String> languages, String tag, bool useAuthors) =>
       _requestStories(languages, tag, useAuthors);
 }

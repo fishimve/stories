@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stories/interface/shared/ui_helpers.dart';
 import 'package:stories/interface/widgets/text_widget.dart';
 import 'package:stories/models/story.dart';
 
@@ -26,6 +27,7 @@ class StoryWidget extends StatelessWidget {
             tags: story.tags,
             language: story.language,
           ),
+          verticalSpaceSmall,
           // const Divider(
           //   thickness: 0,
           //   height: 1,
@@ -116,7 +118,7 @@ class StoryTagsWidget extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
       child: Align(
         alignment: Alignment.centerLeft,
-        child: TextWiget.caption('$language\t-\t${tags.join(', ')}'),
+        child: TextWiget.caption('$language - ${tags.join(', ')}'),
       ),
     );
   }

@@ -1,14 +1,13 @@
-import 'package:tuple/tuple.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter/material.dart';
+import 'package:stories/interface/router.dart';
 import 'package:stories/interface/shared/ui_helpers.dart';
-import 'package:stories/interface/views/home/authors_view.dart';
-import 'package:stories/interface/views/home/favorites_view.dart';
-import 'package:stories/interface/views/home/stories_view.dart';
 import 'package:stories/interface/widgets/text_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:stories/locator.dart';
+import 'package:stories/routes/route_names.dart';
+import 'package:stories/services/navigation_service.dart';
 
-import 'connection_model.dart';
 import 'home_view_model.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,90 +16,47 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
-      onModelReady: (viewModel) => viewModel.getTagsAndStories(),
       viewModelBuilder: () => HomeViewModel(),
+      onModelReady: (viewModel) => viewModel.setLanguages(),
       builder: (context, viewModel, child) {
-        final tabbedViews = [
-          Tuple2(
-            AppLocalizations.of(context)!.stories,
-            StoriesView(viewModel: viewModel),
-          ),
-          Tuple2(
-            AppLocalizations.of(context)!.authors,
-            AuthorsView(viewModel: viewModel),
-          ),
-          Tuple2(
-            AppLocalizations.of(context)!.favorites,
-            FavoritesView(viewModel: viewModel),
-          ),
-        ];
-        return DefaultTabController(
-          length: tabbedViews.length,
-          child: Scaffold(
-            appBar: AppBar(
-              automaticallyImplyLeading: false,
-              backgroundColor: Theme.of(context).backgroundColor,
-              elevation: 0,
-              titleSpacing: 0,
-              title: TabBar(
-                indicator: UnderlineTabIndicator(
-                  borderSide: BorderSide(
-                    width: 3.0,
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  insets: const EdgeInsets.symmetric(horizontal: 110.0),
+        return Scaffold(
+          body: Column(
+            children: [
+              Expanded(
+                child: Navigator(
+                  key: locator<NavigationService>().navigationKey,
+                  onGenerateRoute: generateRoute,
+                  initialRoute: tabsViewRoute,
                 ),
-                tabs: tabbedViews
-                    .map<Tab>(
-                      (Tuple2 tab) => Tab(text: tab.item1),
-                    )
-                    .toList(),
               ),
-            ),
-            body: ViewModelBuilder<ConnectionModel>.reactive(
-              viewModelBuilder: () => ConnectionModel(),
-              builder: (context, connectionModel, child) => Column(
-                children: [
-                  Expanded(
-                    child: TabBarView(
-                      children: tabbedViews
-                          .map<Widget>((Tuple2 page) => page.item2)
-                          .toList(),
-                    ),
+              Container(
+                height: 50,
+                padding: const EdgeInsets.only(left: 10),
+                width: double.infinity,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: viewModel.allLanguagesStrings
+                        .map(
+                          (l) => GestureDetector(
+                            onTap: () => viewModel.toggleLanguageSelection(l),
+                            child: LanguageWidget(
+                              language: l,
+                              isSelected:
+                                  viewModel.selectedLanguages.contains(l),
+                            ),
+                          ),
+                        )
+                        .toList(),
                   ),
-                  // const Divider(
-                  //   thickness: 0,
-                  //   height: 1,
-                  // ),
-                  Container(
-                    height: 50,
-                    padding: const EdgeInsets.only(left: 10),
-                    width: double.infinity,
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: viewModel.allLanguagesStrings.map(
-                          (l) {
-                            return GestureDetector(
-                              onTap: () {
-                                viewModel.toggleLangueSelection(l);
-                              },
-                              child: LanguageWidget(
-                                language: l,
-                                isSelected:
-                                    viewModel.selectedLanguages.contains(l),
-                              ),
-                            );
-                          },
-                        ).toList(),
-                      ),
-                    ),
-                  ),
-
-                  if (connectionModel.data ?? true)
-                    Container(
+                ),
+              ),
+              ViewModelBuilder<ConnectionModel>.reactive(
+                viewModelBuilder: () => ConnectionModel(),
+                builder: (context, connectionModel, child) {
+                  if (connectionModel.data ?? true) {
+                    return Container(
                       padding: basePadding,
-                      color: Theme.of(context).backgroundColor,
                       child: Center(
                         child: FittedBox(
                           child: TextWiget.caption(
@@ -108,10 +64,13 @@ class HomeView extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                ],
+                    );
+                  } else {
+                    return const SizedBox.shrink();
+                  }
+                },
               ),
-            ),
+            ],
           ),
         );
       },
@@ -137,9 +96,13 @@ class LanguageWidget extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),
         ),
-        label: TextWiget.body(language),
+        label: TextWiget.body(
+          language,
+          color: isSelected ? Theme.of(context).backgroundColor : null,
+          fontWeight: isSelected ? 2 : 1,
+        ),
         backgroundColor: isSelected
-            ? Theme.of(context).primaryColor.withOpacity(.1)
+            ? Theme.of(context).primaryColor
             : Theme.of(context).backgroundColor,
         elevation: 0.0,
         shadowColor: Theme.of(context).primaryColor,

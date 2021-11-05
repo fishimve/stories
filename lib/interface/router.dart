@@ -4,6 +4,7 @@ import 'package:stories/models/story.dart';
 import 'package:stories/routes/route_names.dart';
 
 import 'views/story/story_view.dart';
+import 'views/tabs/tabs_view.dart';
 
 PageRoute _pageRoute({required String routeName, required Widget view}) {
   return MaterialPageRoute(
@@ -14,6 +15,11 @@ PageRoute _pageRoute({required String routeName, required Widget view}) {
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
+    case tabsViewRoute:
+      return _pageRoute(
+        routeName: settings.name!,
+        view: const TabsView(),
+      );
     case storyViewRoute:
       final story = settings.arguments as Story;
       return _pageRoute(

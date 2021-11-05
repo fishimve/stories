@@ -1,10 +1,11 @@
 {
   "@@locale": "ru",
   "authors": "Авторы",
+  "bookmarks": "Закладки",
+  "bookmarksEmpty": "Закладок нет.",
   "dialogConfirmation": "Вы уверены, что хотите удалить это из избранного?",
   "dialogTitle": "Удалить из избранного",
   "error": "Ошибка!",
-  "favorites": "Избранное",
   "internetIsLost": "Интернет-соединение недоступно",
   "no": "Нет",
   "notAvailable": "Рассказы на данный момент недоступны",

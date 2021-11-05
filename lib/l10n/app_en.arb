@@ -1,10 +1,11 @@
 {
   "@@locale": "en",
   "authors": "Authors",
+  "bookmarks": "Bookmarks",
+  "bookmarksEmpty": "No bookmarks. ",
   "dialogConfirmation": "Are you sure you want to remove this from your favourites?",
   "dialogTitle": "Remove from Favourites",
   "error": "Error!",
-  "favorites": "Favourites",
   "internetIsLost": "Internet connection is not available",
   "no": "No",
   "notAvailable": "Stories are not available at the moment",

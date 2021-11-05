@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:stories/interface/shared/ui_helpers.dart';
-import 'package:stories/interface/views/home/home_view_model.dart';
 import 'package:stories/interface/widgets/text_widget.dart';
 import 'package:stories/interface/widgets/web_centered_widget.dart';
 
+import 'tabs_view_model.dart';
+
 class AuthorsView extends StatefulWidget {
-  final HomeViewModel viewModel;
+  final TabsViewModel viewModel;
 
   const AuthorsView({Key? key, required this.viewModel}) : super(key: key);
 

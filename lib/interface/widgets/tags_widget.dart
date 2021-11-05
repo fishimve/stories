@@ -26,6 +26,7 @@ class TagsWidget extends StatelessWidget {
     return Container(
       height: 50,
       padding: const EdgeInsets.only(left: 20),
+      alignment: Alignment.center,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

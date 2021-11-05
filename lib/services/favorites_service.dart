@@ -19,7 +19,7 @@ class FavoritesService extends StoppableService with ReactiveServiceMixin {
     listenToReactiveValues([_reactiveList]);
   }
 
-  Future<void> initSetup(List<String> languages) async {
+  Future<void> initSetup() async {
     final favs = _storageService.getStringListFromDisk('favorites');
     if (favs.isNotEmpty) {
       _favoritesIds.addAll(favs);
