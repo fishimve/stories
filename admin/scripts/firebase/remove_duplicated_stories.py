@@ -11,10 +11,14 @@ db = firestore.client()
 
 batch = db.batch()
 
-last_doc = db.collection(u'stories').document(u'ZWDbhGIqp46lNB6VU8pM').get()
+# last_doc = db.collection(u'stories').document(u'ZWDbhGIqp46lNB6VU8pM').get()
+
+# stories_docs = db.collection(u'stories').where(
+#     u'language', u'==', u'English').order_by(u'title').start_at(last_doc).stream()
 
 stories_docs = db.collection(u'stories').where(
-    u'language', u'==', u'English').order_by(u'title').start_at(last_doc).stream()
+    u'language', u'==', u'Русский').stream()
+
 
 storiestt = list()
 
