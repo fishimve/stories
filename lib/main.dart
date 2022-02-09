@@ -1,9 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:stories/interface/shared/colors.dart';
+
+import 'package:flutter/gestures.dart';
+import 'locator.dart';
+import 'utilities/dialog_manager.dart';
+import 'utilities/lifecycle_manager.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -11,11 +15,10 @@ import 'interface/shared/themes.dart';
 import 'interface/views/home/home_view.dart';
 import 'l10n/l10n.dart';
 import 'services/dialog_service.dart';
+
 import 'utilities/configure_nonweb.dart'
     if (dart.library.html) 'utilities/configure_web.dart';
-import 'locator.dart';
-import 'utilities/dialog_manager.dart';
-import 'utilities/lifecycle_manager.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,7 +59,10 @@ void main() async {
   runApp(const WorldStories());
 }
 
+
+
 class WorldStories extends StatelessWidget {
+
   const WorldStories({Key? key}) : super(key: key);
 
   @override

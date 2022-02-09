@@ -22,6 +22,8 @@ class FavoritesService extends StoppableService with ReactiveServiceMixin {
   Future<void> initSetup() async {
     final favs = _storageService.getStringListFromDisk('favorites');
     if (favs.isNotEmpty) {
+      _favoritesIds.clear();
+      _reactiveList.clear();
       _favoritesIds.addAll(favs);
       for (var f in favs) {
         var story = await _firestoreService.getFavoriteStory(f);

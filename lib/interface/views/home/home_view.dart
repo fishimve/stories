@@ -102,7 +102,7 @@ class LanguageWidget extends StatelessWidget {
           fontWeight: isSelected ? 2 : 1,
         ),
         backgroundColor: isSelected
-            ? Theme.of(context).primaryColor
+            ? Theme.of(context).canvasColor
             : Theme.of(context).backgroundColor,
         elevation: 0.0,
         shadowColor: Theme.of(context).primaryColor,

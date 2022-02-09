@@ -32,7 +32,7 @@ class HomeViewModel extends BaseViewModel {
       _selected.remove(lang);
       _languagesService.saveSelectedLanguages(_selected.toSet());
     }
-    await _navigationService.navigateTo(tabsViewRoute);
+    await _navigationService.navigateReplaceTo(tabsViewRoute);
     setBusy(false);
   }
 }
