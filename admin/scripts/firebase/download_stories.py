@@ -17,13 +17,12 @@ stories_docs = db.collection(u'stories').where(
 
 for doc in stories_docs:
     story = doc.to_dict()
-    title = story.get('title')
+    id = story.get('id')
     json_object = json.dumps(story, indent=4, default=str)
 
-    with open(f'{title}.json', "w") as outfile:
+    with open(f'{id}.json', "w") as outfile:
         outfile.write(json_object)
 
 
 
-# my_dict = { el.id: el.to_dict() for el in stories_docs }
 
