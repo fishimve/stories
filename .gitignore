@@ -32,7 +32,6 @@
 /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -55,3 +54,16 @@ app.*.map.json
 **/android/local.properties
 **/android/key.properties
 **/android/**/GeneratedPluginRegistrant.java
+
+.DS_Store
+*.plist
+GoogleService-Info.plist
+google-services.json
+.dart_tool/
+firebase_options.dart
+.VSCodeCounter/
+demo/
+replacements.txt
+secrets.json
+demo/
+content/
