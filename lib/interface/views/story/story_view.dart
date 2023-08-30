@@ -15,11 +15,11 @@ class StoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<StoryViewModel>.reactive(
       viewModelBuilder: () => StoryViewModel(),
-      onModelReady: (viewModel) => viewModel.getFavoriteStatus(story.id),
+      onViewModelReady: (viewModel) => viewModel.getFavoriteStatus(story.id),
       builder: (context, viewModel, child) {
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: Theme.of(context).backgroundColor,
+            backgroundColor: Theme.of(context).colorScheme.background,
             elevation: 0,
             leading: IconButton(
               icon: Icon(

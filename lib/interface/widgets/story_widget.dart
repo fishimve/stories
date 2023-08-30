@@ -16,7 +16,7 @@ class StoryWidget extends StatelessWidget {
     return Card(
       elevation: 0,
       shape: null,
-      color: Theme.of(context).backgroundColor,
+      color: Theme.of(context).colorScheme.background,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

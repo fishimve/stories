@@ -1,16 +1,21 @@
 import 'dart:async';
 
-import 'package:connectivity/connectivity.dart';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 import 'stoppable_service.dart';
 
 class ConnectivityService extends StoppableService {
-  var offlineStatusController = StreamController<bool>();
+  final offlineStatusController = StreamController<bool>.broadcast();
 
   ConnectivityService() {
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
       offlineStatusController.add(_isOffline(result));
     });
+  }
+
+  void cancelListening() {
+    offlineStatusController.close();
   }
 
   bool _isOffline(ConnectivityResult result) {

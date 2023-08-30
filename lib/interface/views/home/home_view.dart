@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
       viewModelBuilder: () => HomeViewModel(),
-      onModelReady: (viewModel) => viewModel.setLanguages(),
+      onViewModelReady: (viewModel) => viewModel.setLanguages(),
       builder: (context, viewModel, child) {
         return Scaffold(
           body: Column(
@@ -98,12 +98,12 @@ class LanguageWidget extends StatelessWidget {
         ),
         label: TextWiget.body(
           language,
-          color: isSelected ? Theme.of(context).backgroundColor : null,
+          color: isSelected ? Theme.of(context).colorScheme.background : null,
           fontWeight: isSelected ? 2 : 1,
         ),
         backgroundColor: isSelected
             ? Theme.of(context).canvasColor
-            : Theme.of(context).backgroundColor,
+            : Theme.of(context).colorScheme.background,
         elevation: 0.0,
         shadowColor: Theme.of(context).primaryColor,
         padding: const EdgeInsets.all(4.0),

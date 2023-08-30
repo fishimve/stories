@@ -20,6 +20,6 @@ Future<void> setupLocator() async {
   locator.registerFactory(() => CategoriesService());
   locator.registerFactory(() => FirestoreService());
 
-  var instance = await LocalStorageService.getServiceInstance();
+  final instance = await LocalStorageService.getServiceInstance();
   locator.registerSingleton<LocalStorageService>(instance!);
 }

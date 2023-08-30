@@ -1,10 +1,11 @@
+import 'dart:ui';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:stories/interface/shared/colors.dart';
 
-import 'package:flutter/gestures.dart';
+import 'firebase_options.dart';
 import 'locator.dart';
 import 'utilities/dialog_manager.dart';
 import 'utilities/lifecycle_manager.dart';
@@ -19,16 +20,15 @@ import 'services/dialog_service.dart';
 import 'utilities/configure_nonweb.dart'
     if (dart.library.html) 'utilities/configure_web.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-// initialize all services
+  // initialize all services
   await setupLocator();
 
-// configure route styles
+  // configure route styles
   configureRouteStyles();
 
   // allow only portrait mode
@@ -39,7 +39,7 @@ void main() async {
     ],
   );
 
-  final brightness = SchedulerBinding.instance!.window.platformBrightness;
+  final brightness = PlatformDispatcher.instance.platformBrightness;
   bool isDark = brightness == Brightness.dark;
 
   SystemChrome.setSystemUIOverlayStyle(
@@ -59,10 +59,7 @@ void main() async {
   runApp(const WorldStories());
 }
 
-
-
 class WorldStories extends StatelessWidget {
-
   const WorldStories({Key? key}) : super(key: key);
 
   @override

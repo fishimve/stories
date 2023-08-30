@@ -22,14 +22,14 @@ class CategoriessView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<CategoriesViewModel>.reactive(
       viewModelBuilder: () => CategoriesViewModel(),
-      createNewModelOnInsert: true,
-      onModelReady: (viewModel) =>
+      createNewViewModelOnInsert: true,
+      onViewModelReady: (viewModel) =>
           viewModel.getCategoryStories(category, useAuthors),
       builder: (context, viewModel, child) {
         var stories = viewModel.categoryStories;
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: Theme.of(context).backgroundColor,
+            backgroundColor: Theme.of(context).colorScheme.background,
             elevation: 0,
             leading: IconButton(
               icon: Icon(

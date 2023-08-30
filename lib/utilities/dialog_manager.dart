@@ -23,7 +23,7 @@ class _DialogManagerState extends State<DialogManager> {
       context: context,
       builder: (context) => WebCenteredWidget(
         child: AlertDialog(
-          backgroundColor: Theme.of(context).backgroundColor,
+          backgroundColor: Theme.of(context).colorScheme.background,
           elevation: 1,
           title: TextWiget.headline2(
             request.title,
@@ -38,7 +38,7 @@ class _DialogManagerState extends State<DialogManager> {
                       .dialogComplete(DialogResponse(confirmed: false));
                 },
                 style: OutlinedButton.styleFrom(
-                  primary: Theme.of(context).primaryColor,
+                  foregroundColor: Theme.of(context).primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(borderRadius),
                   ),
@@ -53,7 +53,7 @@ class _DialogManagerState extends State<DialogManager> {
                 _dialogService.dialogComplete(DialogResponse(confirmed: true));
               },
               style: OutlinedButton.styleFrom(
-                primary: Theme.of(context).primaryColor,
+                foregroundColor: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(borderRadius),
                 ),

@@ -6,7 +6,7 @@ import 'firestore_service.dart';
 import 'localstorage_service.dart';
 import 'stoppable_service.dart';
 
-class FavoritesService extends StoppableService with ReactiveServiceMixin {
+class FavoritesService extends StoppableService with ListenableServiceMixin {
   final _storageService = locator<LocalStorageService>();
   final _firestoreService = locator<FirestoreService>();
 

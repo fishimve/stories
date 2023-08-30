@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:stories/locator.dart';
 import 'package:stories/services/categories_service.dart';
 import 'package:stories/services/connectivity_service.dart';
-import 'package:stories/services/dialog_service.dart';
 import 'package:stories/services/favorites_service.dart';
 import 'package:stories/services/firestore_service.dart';
 import 'package:stories/services/languages_service.dart';
 import 'package:stories/services/localstorage_service.dart';
-import 'package:stories/services/navigation_service.dart';
 
 /// Stop and start long running services
 class LifeCycleManager extends StatefulWidget {
@@ -20,9 +18,7 @@ class LifeCycleManager extends StatefulWidget {
 
 class _LifeCycleManagerState extends State<LifeCycleManager>
     with WidgetsBindingObserver {
-  var servicesToManage = [
-    locator<NavigationService>(),
-    locator<DialogService>(),
+  final servicesToManage = [
     locator<FirestoreService>(),
     locator<ConnectivityService>(),
     locator<LocalStorageService>(),
@@ -39,13 +35,13 @@ class _LifeCycleManagerState extends State<LifeCycleManager>
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose() {
     super.dispose();
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
   }
 
   @override

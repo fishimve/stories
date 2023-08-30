@@ -7,10 +7,10 @@ class ThemeConfig {
   static ThemeData lightTheme = ThemeData(
     primaryColor: AppColors.primaryLight,
     scaffoldBackgroundColor: AppColors.backgroundLight,
-    backgroundColor: AppColors.backgroundLight,
     dividerColor: AppColors.secondaryLight.withOpacity(.60),
     canvasColor: Colors.black.withOpacity(.45),
     colorScheme: ColorScheme.fromSwatch().copyWith(
+      background: AppColors.backgroundLight,
       secondary: AppColors.primaryLight,
     ),
     brightness: Brightness.light,
@@ -32,12 +32,8 @@ class ThemeConfig {
   static ThemeData darkTheme = ThemeData(
     primaryColor: AppColors.primaryDark,
     scaffoldBackgroundColor: AppColors.backgroundDark,
-    backgroundColor: AppColors.backgroundDark,
     dividerColor: AppColors.secondaryDark.withOpacity(.60),
     canvasColor: Colors.white.withOpacity(.45),
-    colorScheme: const ColorScheme.dark().copyWith(
-      secondary: AppColors.primaryDark,
-    ),
     brightness: Brightness.dark,
     tabBarTheme: TabBarTheme(
       labelColor: AppColors.secondaryDark,
@@ -53,5 +49,10 @@ class ThemeConfig {
         size: 25,
       ),
     ),
+    colorScheme: const ColorScheme.dark()
+        .copyWith(
+          secondary: AppColors.primaryDark,
+        )
+        .copyWith(background: AppColors.backgroundDark),
   );
 }

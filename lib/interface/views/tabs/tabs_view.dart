@@ -14,9 +14,9 @@ class TabsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<TabsViewModel>.reactive(
-      onModelReady: (viewModel) => viewModel.getTagsAndStories(),
+      onViewModelReady: (viewModel) => viewModel.getTagsAndStories(),
       viewModelBuilder: () => TabsViewModel(),
-      createNewModelOnInsert: true,
+      createNewViewModelOnInsert: true,
       builder: (context, viewModel, child) {
         final tabbedViews = [
           Tuple2(
@@ -37,7 +37,7 @@ class TabsView extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: Theme.of(context).backgroundColor,
+              backgroundColor: Theme.of(context).colorScheme.background,
               elevation: 0,
               titleSpacing: 0,
               title: TabBar(

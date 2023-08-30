@@ -94,5 +94,5 @@ class TabsViewModel extends ReactiveViewModel {
   }
 
   @override
-  List<ReactiveServiceMixin> get reactiveServices => [_favoritesService];
+  List<ListenableServiceMixin> get listenableServices => [_favoritesService];
 }
